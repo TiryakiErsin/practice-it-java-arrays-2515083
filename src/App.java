@@ -1,7 +1,21 @@
+import java.util.Arrays;
+
 public class App {
   
+  public static Integer findSecondSmallestItem2(Integer[] arr) {
+
+    Arrays.sort(arr);
+   // return Arrays.stream(arr).skip(1).findFirst().orElse(null);
+   for (int i = 0; i < arr.length - 1 ; i++) {
+    if (arr[i] != arr[i+1]) {
+      return arr[i+1];
+    }
+   }
+   return null;
+  }
+
   public static Integer findSecondSmallestItem(Integer[] arr) {
-    return 0;
+    return null; 
   }
     
   public static void main(String args[]) {
